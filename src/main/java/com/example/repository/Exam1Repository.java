@@ -24,7 +24,7 @@ public class Exam1Repository {
 	private final static String TABLE_NAME = "teams";
 
 	@Autowired
-	NamedParameterJdbcTemplate template;
+	private NamedParameterJdbcTemplate template;
 
 	/**
 	 * 全チーム情報を発足日順の昇順で取得.
