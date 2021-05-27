@@ -1,12 +1,7 @@
-package com.example.domain;
+package com.example.form;
 
-/**
- * ホテル情報用ドメインクラス.
- * 
- * @author ryotaro.seya
- *
- */
-public class Hotel {
+//@Validated
+public class HotelForm {
 	/** id 主キー */
 	private Integer id;
 	/** 地域名 */
@@ -18,13 +13,14 @@ public class Hotel {
 	/** 最寄り駅 */
 	private String nearestStation;
 	/** 料金 */
-	private Integer price;
+//	@Pattern(regexp = "^[0-9]$", message = "検索結果に一致するホテルは存在しません")
+	private String price;
 	/** 駐車場の有無 */
 	private String parking;
 
 	@Override
 	public String toString() {
-		return "Hotel [id=" + id + ", areaName=" + areaName + ", hotelName=" + hotelName + ", address=" + address
+		return "HotelForm [id=" + id + ", areaName=" + areaName + ", hotelName=" + hotelName + ", address=" + address
 				+ ", nearestStation=" + nearestStation + ", price=" + price + ", parking=" + parking + "]";
 	}
 
@@ -68,11 +64,11 @@ public class Hotel {
 		this.nearestStation = nearestStation;
 	}
 
-	public Integer getPrice() {
+	public String getPrice() {
 		return price;
 	}
 
-	public void setPrice(Integer price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 
@@ -83,5 +79,4 @@ public class Hotel {
 	public void setParking(String parking) {
 		this.parking = parking;
 	}
-
 }
